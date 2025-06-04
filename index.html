@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Roblox Server</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const placeId = urlParams.get('placeId');
+            const gameId = urlParams.get('gameId');
+            if (placeId && gameId) {
+                window.location.href = `roblox://placeId=${placeId}&gameId=${gameId}`;
+            } else {
+                alert('Invalid parameters');
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Перенаправление в Roblox...</p>
+</body>
+</html>
